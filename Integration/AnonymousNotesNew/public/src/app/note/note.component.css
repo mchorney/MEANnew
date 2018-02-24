@@ -1,0 +1,10 @@
+div {
+  border: 1px solid black;
+  font-size: smaller;
+  padding: 5px 10px;
+  margin: 10px 0;
+}
+
+#right-align {
+  text-align: right;
+}

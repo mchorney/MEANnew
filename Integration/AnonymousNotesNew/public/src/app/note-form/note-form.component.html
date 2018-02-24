@@ -1,0 +1,7 @@
+<div>
+  <form #formData='ngForm' (submit)='createNote()'>
+    <p>Note:
+      <input id='text_box' type="text" name="content" required minlength='4' [(ngModel)]='note.content' #content='ngModel'>
+      <input type="submit" value='Add Note' [disabled]='!formData.valid'>
+  </form>
+</div>

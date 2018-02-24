@@ -1,0 +1,5 @@
+<div>
+  <h1>Anonymous Notes</h1>
+  <app-note-form (newNoteEmitter)='createNote($event)'></app-note-form>
+  <app-notes-display [notes]='notes'></app-notes-display>
+</div>
