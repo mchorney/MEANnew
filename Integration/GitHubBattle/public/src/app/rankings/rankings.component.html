@@ -1,0 +1,5 @@
+<div *ngFor='let player of players; let i = index'>
+  <h1>{{i + 1}}</h1>
+  <app-player-display [player]='player'></app-player-display>
+  <h1>Score: {{player.score}}</h1>
+</div>

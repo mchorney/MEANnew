@@ -1,0 +1,17 @@
+.red {
+  color: red
+}
+
+.green {
+  color: green;
+}
+
+#results {
+  display: inline-block;
+  width: 40%;
+}
+
+app-player-display {
+  display: inline-block;
+  width: 40%;
+}

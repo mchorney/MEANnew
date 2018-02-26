@@ -1,0 +1,13 @@
+div {
+  height: 200px;
+  margin: 10px;
+}
+
+h1 {
+  display: inline-block;
+  vertical-align: top;
+}
+
+app-player-display {
+  display: inline-block;
+}

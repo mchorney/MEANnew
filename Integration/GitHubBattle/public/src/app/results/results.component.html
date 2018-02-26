@@ -1,0 +1,19 @@
+<div *ngIf='player1.score>player2.score'>
+  <div id='results'>
+    <h1 class='green'>1st Place</h1>
+    <p class='green'>{{player1.user_name}} (Score: {{player1.score}})</p>
+    <h1 class='red'>2nd Place</h1>
+    <p class='red'>{{player2.user_name}} (Score: {{player2.score}})</p>
+  </div>
+  <app-player-display [player]='player1'></app-player-display>
+</div>
+
+<div *ngIf='player2.score>player1.score'>
+  <h1 class='green'>1st Place</h1>
+  <p class='green'>{{player2.user_name}} (Score: {{player2.score}})</p>
+  <h1 class='red'>2nd Place</h1>
+  <p class='red'>{{player1.user_name}} (Score: {{player1.score}})</p>
+  <app-player-display [player]='player2'></app-player-display>
+</div>
+
+<button (click)='reset()'>Reset</button>

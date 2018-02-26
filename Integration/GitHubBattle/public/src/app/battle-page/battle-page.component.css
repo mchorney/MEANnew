@@ -1,0 +1,13 @@
+div {
+  display: inline-block;
+  border: 1px solid black;
+  width: 40%;
+  margin: 5px;
+  padding: 5px;
+}
+
+button {
+  background-color: orange;
+  width: 80%;
+  margin: 10px;
+}

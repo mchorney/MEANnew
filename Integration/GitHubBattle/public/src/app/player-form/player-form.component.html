@@ -1,0 +1,8 @@
+<h1>Player {{position}}</h1>
+<form #formData='ngForm' (submit)='sendPlayer($event)'>
+  <p>Github Username:
+    <input type="text" name="user_name" required [(ngModel)]='user.user_name' #name='ngModel'>
+  </p>
+  <p class='red' *ngIf='notfound'>Github Username does not exist, try again</p>
+  <input type="submit" value='Get User' [disabled]='!formData.valid'>
+</form>

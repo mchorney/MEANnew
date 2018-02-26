@@ -1,0 +1,9 @@
+<div>
+  <app-player-form *ngIf="!player1.ready" [player]='player1' [position]='1' (playerEmitter)='findGitUser($event)'></app-player-form>
+  <app-player-display *ngIf="player1.ready" [player]='player1' [position]='1'></app-player-display>
+</div>
+<div>
+  <app-player-form *ngIf="!player2.ready" [player]='player2' [position]='2' (playerEmitter)='findGitUser($event)'></app-player-form>
+  <app-player-display *ngIf="player2.ready" [player]='player2' [position]='2'></app-player-display>
+</div>
+<button *ngIf='player1.ready && player2.ready' (click)='battle()'>BATTLE!</button>

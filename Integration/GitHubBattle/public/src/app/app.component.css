@@ -1,0 +1,16 @@
+li {
+  display: inline;
+  margin: 0 5px;
+}
+
+h1 {
+  display: inline-block;
+}
+
+ul {
+  display: inline-block;
+}
+
+router-outlet {
+  display: block;
+}
