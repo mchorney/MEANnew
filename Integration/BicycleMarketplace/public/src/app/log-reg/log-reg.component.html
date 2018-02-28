@@ -1,0 +1,42 @@
+<h1>Bike of the day</h1>
+<img src="{{randomBike.image}}" width="200px" alt="bloop">
+<br> {{randomBike.title}}
+<br> ${{randomBike.price}}
+<br> {{randomBike.info}}
+<br> {{randomBike.location}}
+<br>
+
+<h3>Login</h3>
+<form (submit)="login()" #logForm="ngForm">
+  Email:
+  <input type="email" name="emailL" #emailL="ngModel" required [(ngModel)]="log.emailL">
+  <span class='error' *ngIf='emailL.dirty && !emailL.valid'>Put a valid email!</span>
+  <br> Password:
+  <input type="password" name="passwordL" #passwordL="ngModel" required [(ngModel)]="log.passwordL">
+  <span class='error' *ngIf='passwordL.dirty && !passwordL.valid'>You gotta put your password!</span>
+  <br>
+  <input type="submit" [disabled]="!logForm.valid" value="Login!">
+</form>
+<span class='error'>{{ errors | json }}</span>
+
+<h3>Register</h3>
+<form (submit)="register()" #regForm="ngForm">
+  First Name:
+  <input type="text" name="firstName" #firstName="ngModel" required [(ngModel)]="reg.firstName">
+  <span class='error' *ngIf='firstName.dirty && !firstName.valid'>Put your first name silly!</span>
+  <br> Last Name:
+  <input type="text" name="lastName" #lastName="ngModel" required [(ngModel)]="reg.lastName">
+  <span class='error' *ngIf='lastName.dirty && !lastName.valid'>Don't forget your last name!</span>
+  <br> Email:
+  <input type="email" name="email" #email="ngModel" [(ngModel)]="reg.email">
+  <span class='error' *ngIf='email.dirty && !email.valid'>Put a valid email!</span>
+  <br> Password:
+  <input type="password" name="password" #password="ngModel" minlength="16" required [(ngModel)]="reg.password">
+  <span class='error' *ngIf='password.dirty && !password.valid'>Put yo password!</span>
+  <br> Confirm Password:
+  <input type="password" name="cp" #cp="ngModel" [(ngModel)]="check.cp">
+  <span class='error' *ngIf='cp.dirty && check.cp !== reg.password'>Your passwords gotta match!!</span>
+  <br>
+  <input type="submit" [disabled]="!regForm.valid" value="Register!">
+</form>
+

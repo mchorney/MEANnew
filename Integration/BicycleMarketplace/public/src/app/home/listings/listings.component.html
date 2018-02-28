@@ -1,0 +1,47 @@
+<h3>Create Listing</h3>
+<form (submit)='addBike()' #newForm="ngForm">
+  Title:
+  <input type="text" name='title' #title="ngModel" [(ngModel)]="newBike.title" required>
+  <span class='error' *ngIf='title.dirty && !title.valid'>Put your title silly!</span>
+  <br> Info:
+  <input type="text" name='info' #info="ngModel" [(ngModel)]="newBike.info" required maxlength="200">
+  <span class='error' *ngIf='info.dirty && !info.valid'>Put your info silly!</span>
+  <br> Price: $
+  <input type="text" name='price' #price="ngModel" [(ngModel)]="newBike.price">
+  <span class='error' *ngIf='price.dirty && !price.valid'>Put your price silly!</span>
+  <span>{{err}}</span>
+  <br> Location:
+  <input type="text" name='location' #location="ngModel" [(ngModel)]="newBike.location" required>
+  <span class='error' *ngIf='location.dirty && !location.valid'>Put your location silly!</span>
+  <br> Image URL:
+  <input type="text" name='image' #image="ngModel" [(ngModel)]="newBike.image" required>
+  <span class='error' *ngIf='image.dirty && !image.valid'>Put your image silly!</span>
+  <br>
+  <input type="submit" value="create">
+</form>
+
+<h3>Edit/Delete Listings</h3>
+<div *ngFor="let bike of loggedBikes">
+  <form (submit)="edit(bike._id)" #editForm="ngForm">
+    <img src="{{bike.image}}" width="200px" alt="bloop">
+    <br> Title:
+    <input type="text" name='titleE' #titleE="ngModel" [(ngModel)]="editBike.titleE" required>
+    <span class='error' *ngIf='titleE.dirty && !titleE.valid'>Put your title silly!</span>
+    <br> Info:
+    <input type="text" name='infoE' #infoE="ngModel" [(ngModel)]="editBike.infoE" required maxlength="200">
+    <span class='error' *ngIf='infoE.dirty && !infoE.valid'>Put your info silly!</span>
+    <br> Price:
+    <input type="text" name='priceE' #priceE="ngModel" [(ngModel)]="editBike.priceE">
+    <span class='error' *ngIf='priceE.dirty && !priceE.valid'>Put your price silly!</span>
+    <br> Location:
+    <input type="text" name='locationE' #locationE="ngModel" [(ngModel)]="editBike.locationE" required>
+    <span class='error' *ngIf='locationE.dirty && !locationE.valid'>Put your location silly!</span>
+    <br> Image URL:
+    <input type="text" name='imageE' #imageE="ngModel" [(ngModel)]="editBike.imageE" required>
+    <span class='error' *ngIf='imageE.dirty && !imageE.valid'>Put your image silly!</span>
+    <br>
+    <button type="submit">Update</button>
+  </form>
+  <button (click)="delete(bike._id)">Delete</button>
+</div>
+

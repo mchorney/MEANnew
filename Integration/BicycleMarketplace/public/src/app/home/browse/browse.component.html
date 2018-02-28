@@ -1,0 +1,13 @@
+<form (submit)="search()"></form>
+<div *ngFor="let bike of allBikes">
+  <img src="{{bike.image}}" width="200px" alt="bloop">
+  <br> {{bike.title}}
+  <br> ${{bike.price}}
+  <br> {{bike.info}}
+  <br> {{bike.location}}
+  <br>
+  <button *ngIf='user == bike.user_' (click)="delete(bike._id)">DELETE</button>
+  <button *ngIf='user != bike.user_'>Contact</button>
+</div>
+
+
