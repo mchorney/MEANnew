@@ -1,0 +1,19 @@
+<div class="container">
+  <h1 class="cent">Food n' Drank!</h1>
+  <div class="row">
+    <div *ngFor="let item of foods" class="fooditem">
+      <a [routerLink]="['/food', item._id]">
+        <span>
+          <h5>{{item.name}}</h5>
+          <p>${{item.price}}</p>
+          <p>Quantity: {{item.quantity}}</p>
+        </span>
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3 col-sm-3 col-md-offset-4 col-sm-offset-4">
+      <app-foodform></app-foodform>
+    </div>
+  </div>
+</div>

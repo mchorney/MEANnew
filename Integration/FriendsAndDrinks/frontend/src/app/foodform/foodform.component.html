@@ -1,0 +1,19 @@
+<form (submit)='onSubmit(); newFood.reset()' #newFood='ngForm'>
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input name="name" type='text' required minlength="2" maxlength="30" pattern="^[a-zA-Z]+$" [ngClass]="{'focus': name.dirty && !name.valid, 'good': name.valid}"
+      [(ngModel)]="food.name" #name='ngModel' class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="price">Price:</label>
+    <input name="price" type='number' required min='0' [ngClass]="{'focus': price.dirty && !price.valid, 'good': price.valid}"
+      [(ngModel)]="food.price" #price='ngModel' class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="quantity">Quantity:</label>
+    <input name="quantity" type='number' required min='1' [ngClass]="{'focus': quantity.dirty && !quantity.valid, 'good': quantity.valid}"
+      [(ngModel)]="food.quantity" #quantity='ngModel' class="form-control">
+  </div>
+  <input type="submit" [ngClass]="{'green': newFood.valid}" [disabled]="newFood.invalid">
+</form>
+
