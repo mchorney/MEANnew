@@ -1,0 +1,29 @@
+.register,
+.login {
+  margin: auto;
+  margin-top: 10px;
+  display: block;
+  width: 120px;
+}
+
+.errors {
+  color: red;
+  padding-left: 15px;
+}
+
+.footer {
+  height: 100px;
+}
+
+.left,
+.right {
+  display: inline-block;
+}
+
+.success-msg {
+  color: green;
+}
+
+.input-style {
+  display: block;
+}
