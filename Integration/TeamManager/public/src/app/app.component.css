@@ -1,0 +1,12 @@
+#wrapper {
+  width: 970px;
+  margin: auto;
+  border: 1px solid black;
+  padding: 20px;
+  background-color: #EFEEEE;
+}
+
+li {
+  display: inline-block;
+  font-size: 25px;
+}

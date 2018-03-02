@@ -1,0 +1,10 @@
+#wrapper {
+  padding: 20px;
+  background-color: white;
+  border: 1px solid black;
+}
+
+li {
+  display: inline-block;
+  font-size: 30px;
+}

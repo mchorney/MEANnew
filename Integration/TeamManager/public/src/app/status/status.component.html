@@ -1,0 +1,16 @@
+<div id="wrapper">
+  <h1>Player Status</h1>
+  <ul>
+    <a (click)="getGame1()">
+      <li>Game 1 |</li>
+    </a>
+    <a (click)="getGame2()">
+      <li>Game 2 |</li>
+    </a>
+    <a (click)="getGame3()">
+      <li>Game 3</li>
+    </a>
+  </ul>
+  <app-games [games]="games" [gameNumber]="game_num" (getUpdate)="setGame($event)"></app-games>
+</div>
+

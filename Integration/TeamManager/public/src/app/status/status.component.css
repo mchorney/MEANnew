@@ -1,0 +1,15 @@
+#wrapper {
+  padding: 20px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+li {
+  display: inline-block;
+  text-align: center;
+  font-size: 25px;
+}
+
+ul {
+  text-align: center;
+}

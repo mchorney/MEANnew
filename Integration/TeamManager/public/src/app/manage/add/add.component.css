@@ -1,0 +1,9 @@
+#add {
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.text {
+  width: 500px;
+  margin-bottom: 20px;
+}
